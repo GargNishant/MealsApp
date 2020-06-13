@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/category/category_meals_route.dart';
 
 import 'category.dart';
 
@@ -7,12 +8,20 @@ class CategoryWidget extends StatelessWidget {
 
   CategoryWidget(this._category);
 
+  void _selectCategory(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(
+      builder: (_ctx) {
+        return CategoryMealsRoute(_category);
+      },
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: Theme.of(context).primaryColorDark,
       borderRadius: BorderRadius.circular(10),
-      onTap: (){},
+      onTap: () => _selectCategory(context),
       child: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
