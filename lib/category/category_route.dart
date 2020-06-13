@@ -9,16 +9,17 @@ class CategoryRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Daily Meals"),
       ),
-      body: GridView(
+      body: GridView.builder(
         padding: const EdgeInsets.all(8.0),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-            childAspectRatio: 16 / 9,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10),
-        children: DUMMY_CATEGORIES
-            .map((category) => CategoryWidget(category))
-            .toList(),
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 16 / 9,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+        ),
+        itemCount: DUMMY_CATEGORIES.length,
+        itemBuilder: (context, index) =>
+            CategoryWidget(DUMMY_CATEGORIES[index]),
       ),
     );
   }
