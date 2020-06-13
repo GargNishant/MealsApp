@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
             )),
       ),
       home: CategoryRoute(),
-      initialRoute: "/",
       routes: {
-        "/": (ctx) => CategoryRoute(),
         CategoryMealsRoute.routeName: (ctx) => CategoryMealsRoute(),
       },
     );
