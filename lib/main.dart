@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mealsapp/category/category_meals_route.dart';
 import 'package:mealsapp/category/category_route.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -24,8 +22,10 @@ class MyApp extends StatelessWidget {
             )),
       ),
       home: CategoryRoute(),
+      initialRoute: "/",
       routes: {
-        "/category-meals": (ctx) => CategoryMealsRoute(),
+        "/": (ctx) => CategoryRoute(),
+        CategoryMealsRoute.routeName: (ctx) => CategoryMealsRoute(),
       },
     );
   }
