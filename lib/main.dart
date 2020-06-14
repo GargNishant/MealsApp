@@ -19,7 +19,14 @@ class MyApp extends StatelessWidget {
             headline6: TextStyle(
               fontSize: 20,
               fontFamily: 'RobotoCondensed',
-            )),
+            ),
+          headline4: TextStyle(
+            fontSize: 16,
+            fontFamily: "RobotoCondensed",
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       home: CategoryRoute(),
       routes: {
