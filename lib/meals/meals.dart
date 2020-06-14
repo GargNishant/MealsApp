@@ -20,6 +20,18 @@ class Meal{
       this.affordability = Affordability.Affordable,@required this.categories,@required this.ingredients,@required this.steps,
       this.isGlutenFree = false, this.isLactoseFree = false, this.isVegan = false, this.isVegetarian = false});
 
+  String get complexityText {
+    switch(complexity){
+      case Complexity.Simple:
+        return "Simple";
+      case Complexity.Challenging:
+        return "Challenging";
+      case Complexity.Hard:
+        return "Hard";
+      default:
+        return "Unknown";
+    }
+  }
 }
 
 
