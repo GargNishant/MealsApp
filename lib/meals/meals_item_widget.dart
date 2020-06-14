@@ -64,15 +64,6 @@ class MealsItemWidget extends StatelessWidget {
               ),
             )
           ]),
-//          Padding(
-//            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-//            child: Row(
-//                mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                children: <Widget>[
-//                  DurationSmallWidget(_meal.duration),
-//                  ComplexSmallWidget(_meal.complexityText),
-//                ]),
-//          ),
         ]),
       ),
     );
