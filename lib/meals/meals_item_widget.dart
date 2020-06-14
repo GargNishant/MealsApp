@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/customPaint/left_angled_end.dart';
 import 'package:mealsapp/customPaint/vertical_badge.dart';
+import 'package:mealsapp/meals/meal_detail_route.dart';
 import 'package:mealsapp/meals/meals.dart';
 
 class MealsItemWidget extends StatelessWidget {
   final Meal _meal;
   MealsItemWidget(this._meal);
 
+  void _selectMeal(context){
+    Navigator.of(context).pushNamed(MealDetailRoute.routeName,arguments: _meal,);
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => _selectMeal(context),
       splashColor: Theme.of(context).primaryColorDark,
       borderRadius: BorderRadius.circular(15),
       child: Card(
@@ -22,12 +27,15 @@ class MealsItemWidget extends StatelessWidget {
             ClipRRect(
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(15), topRight: Radius.circular(15)),
-              child: Image.network(
-                _meal.imageUrl,
-                height: 250,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                semanticLabel: _meal.title,
+              child: Hero(
+                tag: _meal.id,
+                child: Image.network(
+                  _meal.imageUrl,
+                  height: 250,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                  semanticLabel: _meal.title,
+                ),
               ),
             ),
             Positioned(
