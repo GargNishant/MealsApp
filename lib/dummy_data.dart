@@ -106,7 +106,7 @@ const DUMMY_MEALS = const [
       '1 Slice Ham',
       '1 Slice Pineapple',
       '1-2 Slices of Cheese',
-      'Butter'
+      'Butter',
     ],
     steps: [
       'Butter one side of the white bread',
