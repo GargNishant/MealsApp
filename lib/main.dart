@@ -15,19 +15,22 @@ class MyApp extends StatelessWidget {
         secondaryHeaderColor: Colors.orange,
         accentColor: Colors.blue,
         textTheme: ThemeData.light().textTheme.copyWith(
-            bodyText2: TextStyle(color: Colors.grey),
-            bodyText1: TextStyle(color: Colors.grey),
-            headline6: TextStyle(
-              fontSize: 20,
-              fontFamily: 'RobotoCondensed',
+              bodyText2: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 16,
+                  fontFamily: "RobotoCondensed"),
+              bodyText1: TextStyle(color: Colors.grey),
+              headline6: TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
+              ),
+              headline4: TextStyle(
+                fontSize: 16,
+                fontFamily: "RobotoCondensed",
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          headline4: TextStyle(
-            fontSize: 16,
-            fontFamily: "RobotoCondensed",
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
       ),
       home: CategoryRoute(),
       routes: {
