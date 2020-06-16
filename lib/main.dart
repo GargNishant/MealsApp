@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/bottom_bar_widget.dart';
 import 'package:mealsapp/category/category_meals_route.dart';
 import 'package:mealsapp/category/category_route.dart';
 import 'package:mealsapp/meals/meal_detail_route.dart';
@@ -32,8 +33,9 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoryRoute(),
+      initialRoute: "/",
       routes: {
+        "/": (ctx) => BottomNavigationWidget(),
         CategoryMealsRoute.routeName: (ctx) => CategoryMealsRoute(),
         MealDetailRoute.routeName: (ctx) => MealDetailRoute(),
       },
