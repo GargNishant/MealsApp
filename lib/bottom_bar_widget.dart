@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/category/category_route.dart';
 import 'package:mealsapp/favourite/favourite_route.dart';
+import 'package:mealsapp/main_drawer.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
   @override
@@ -26,6 +27,7 @@ class _BottomNavigationState extends State<BottomNavigationWidget> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Theme.of(context).primaryColor,
